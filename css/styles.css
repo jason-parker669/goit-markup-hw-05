@@ -348,6 +348,27 @@ a {
   gap: 16px;
 }
 
+.layout-footer-subscribe {
+  max-height: 80px;
+  max-width: 453px;
+  height: 100%;
+  width: 100%;
+  margin-right: 0;
+  margin-left: auto;
+  display: flex;
+  gap: 24px;
+  align-items: end;
+}
+
+.layout-footer-subscribe .layout-input-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.layout-footer-subscribe .layout-input {
+  max-width: 264px;
+}
 /* #endregion LAYOUT */
 
 /* #region THEME*/
