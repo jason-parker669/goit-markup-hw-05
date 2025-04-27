@@ -597,7 +597,7 @@
           </p>
         </div>
         <div class="layout-container-social">
-          <p class="theme-social-heading layout-footer-heading">Social media</p>
+          <p class="theme-footer-heading layout-footer-heading">Social media</p>
           <ul class="theme-social-links layout-social-links">
             <li class="layout-social-link">
               <a href="" class="theme-link layout-link effects-social-icon">
@@ -629,18 +629,28 @@
             </li>
           </ul>
         </div>
-        <form class="layout-footer-subscribe">
+        <form class="theme-footer-subscribe layout-footer-subscribe">
           <div class="layout-input-block">
-            <label for="email">Subscribe</label>
+            <label for="email" class="theme-footer-heading">Subscribe</label>
             <input
               type="email"
               name="email"
               id="email"
               placeholder="E-mail"
-              class="layout-input"
+              class="theme-input layout-input"
             />
           </div>
-          <button>Subscribe</button>
+          <button
+            type="submit"
+            class="theme-footer-button layout-footer-button effects-footer-button"
+          >
+            Subscribe
+            <span
+              ><svg width="24" height="24" class="layout-icon">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </span>
+          </button>
         </form>
       </div>
     </footer>
