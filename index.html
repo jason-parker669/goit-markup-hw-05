@@ -78,7 +78,7 @@
           </h1>
           <button
             type="button"
-            class="theme-hero-button layout-hero-button effects-hero-button"
+            class="theme-button layout-button effects-button"
           >
             Order Service
           </button>
@@ -583,6 +583,40 @@
         </div>
       </section>
       <!-- #endregion PORTFOLIO -->
+      <!-- #region MODAL WINDOW -->
+      <div
+        class="theme-modal-overlay layout-modal-overlay .effects-modal-overlay"
+      >
+        <div class="theme-modal-window layout-modal-window">
+          <button class="theme-button-close layout-button-close"></button>
+          <p>Leave your contacts and we will call you back.</p>
+          <form name="form_contact" class="layout-form">
+            <input type="text" name="name" id="input_name" />
+            <input type="tel" name="phone" id="input_phone" />
+            <input type="email" name="email" id="input_email" />
+            <textarea
+              name="desciption"
+              id="input_description"
+              placeholder="Text input"
+            >
+            </textarea>
+            <input
+              type="checkbox"
+              name="input_agree"
+              id="input_agree"
+              value="yes"
+              required
+            />
+            <label for="input_agree">
+              I accept the terms and conditions of the Privacy Policy</label
+            >
+            <button class="theme-button layout-button effects-button">
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- #endregion MODAL WINDOW -->
     </main>
 
     <footer class="theme-footer layout-footer">
