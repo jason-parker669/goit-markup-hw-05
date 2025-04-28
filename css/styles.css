@@ -882,9 +882,6 @@ a {
 input[type="checkbox"]:checked ~ .theme-label .effects-checkbox-container {
   background-color: var(--color-pressed-state);
   border: none;
-}
-
-input[type="checkbox"]:checked ~ .theme-label .effects-icon {
   fill: var(--color-light);
 }
 
