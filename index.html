@@ -583,40 +583,6 @@
         </div>
       </section>
       <!-- #endregion PORTFOLIO -->
-      <!-- #region MODAL WINDOW -->
-      <div
-        class="theme-modal-overlay layout-modal-overlay .effects-modal-overlay"
-      >
-        <div class="theme-modal-window layout-modal-window">
-          <button class="theme-button-close layout-button-close"></button>
-          <p>Leave your contacts and we will call you back.</p>
-          <form name="form_contact" class="layout-form">
-            <input type="text" name="name" id="input_name" />
-            <input type="tel" name="phone" id="input_phone" />
-            <input type="email" name="email" id="input_email" />
-            <textarea
-              name="desciption"
-              id="input_description"
-              placeholder="Text input"
-            >
-            </textarea>
-            <input
-              type="checkbox"
-              name="input_agree"
-              id="input_agree"
-              value="yes"
-              required
-            />
-            <label for="input_agree">
-              I accept the terms and conditions of the Privacy Policy</label
-            >
-            <button class="theme-button layout-button effects-button">
-              Send
-            </button>
-          </form>
-        </div>
-      </div>
-      <!-- #endregion MODAL WINDOW -->
     </main>
 
     <footer class="theme-footer layout-footer">
@@ -663,30 +629,65 @@
             </li>
           </ul>
         </div>
-        <form class="theme-footer-subscribe layout-footer-subscribe">
-          <div class="layout-input-block">
-            <label for="email" class="theme-footer-heading">Subscribe</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="E-mail"
-              class="theme-input layout-input"
-            />
-          </div>
-          <button
-            type="submit"
-            class="theme-footer-button layout-footer-button effects-footer-button"
-          >
-            Subscribe
-            <span
-              ><svg width="24" height="24" class="layout-icon">
+        <div class="layout-container-form">
+          <p class="theme-footer-heading layout-footer-heading">Subscribe</p>
+          <form class="theme-footer-subscribe layout-footer-subscribe">
+            <label for="email" class="layout-label">
+              <input
+                name="email"
+                type="email"
+                id="email"
+                placeholder="E-mail"
+                class="theme-input layout-input"
+              />
+            </label>
+            <button
+              type="submit"
+              class="theme-footer-button layout-footer-button effects-footer-button"
+            >
+              Subscribe
+
+              <svg width="24" height="24" class="layout-icon">
                 <use href="./images/icons.svg#icon-send"></use>
               </svg>
-            </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <!-- #region MODAL WINDOW -->
+    <div
+      class="theme-modal-overlay layout-modal-overlay .effects-modal-overlay"
+    >
+      <div class="theme-modal-window layout-modal-window">
+        <button class="theme-button-close layout-button-close"></button>
+        <p>Leave your contacts and we will call you back.</p>
+        <form name="form_contact" class="layout-form">
+          <input type="text" name="name" id="input_name" />
+          <input type="tel" name="phone" id="input_phone" />
+          <input type="email" name="email" id="input_email" />
+          <textarea
+            name="desciption"
+            id="input_description"
+            placeholder="Text input"
+          >
+          </textarea>
+          <input
+            type="checkbox"
+            name="input_agree"
+            id="input_agree"
+            value="yes"
+            required
+          />
+          <label for="input_agree">
+            I accept the terms and conditions of the Privacy Policy</label
+          >
+          <button class="theme-button layout-button effects-button">
+            Send
           </button>
         </form>
       </div>
-    </footer>
+    </div>
+    <!-- #endregion MODAL WINDOW -->
   </body>
 </html>

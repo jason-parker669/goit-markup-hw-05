@@ -348,13 +348,13 @@ a {
 }
 
 .layout-footer-subscribe {
+  display: flex;
   max-height: 80px;
   max-width: 453px;
   height: 100%;
   width: 100%;
   margin-right: 0;
   margin-left: auto;
-  display: flex;
   gap: 24px;
   align-items: end;
 }
@@ -373,8 +373,8 @@ a {
 }
 
 .layout-footer-subscribe .layout-input {
-  padding: 8px 16px;
-  max-width: 264px;
+  padding-left: 16px;
+  width: 264px;
   height: 40px;
 }
 
@@ -383,14 +383,14 @@ a {
   padding: 8px 24px;
   align-items: center;
   justify-content: center;
-  max-width: 165px;
+  min-width: 165px;
   height: 40px;
   border: none;
-  gap: 16px;
 }
 
 .layout-footer-button .layout-icon {
   display: flex;
+  margin-left: 16px;
 }
 
 .layout-modal-overlay {
@@ -599,7 +599,7 @@ a {
   line-height: 2;
   letter-spacing: 0.04em;
   color: var(--color-white-background);
-  background-color: inherit;
+  background-color: transparent;
   border: 1px solid var(--color-white-background);
   border-radius: 4px;
   box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.15);
@@ -621,7 +621,7 @@ a {
   font-weight: var(--font-weight-subheading);
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
   border-radius: 4px;
 }
 
@@ -667,6 +667,7 @@ a {
 .effects-social-icon,
 .effects-footer-button {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 
 .effects-button:hover,
@@ -676,7 +677,6 @@ a {
 .effects-footer-button:hover,
 .effects-footer-button:focus {
   background-color: var(--color-pressed-state);
-  cursor: pointer;
 }
 
 .theme-footer .effects-social-icon:hover,
