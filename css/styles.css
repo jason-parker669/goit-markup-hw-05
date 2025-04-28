@@ -400,19 +400,17 @@ a {
   width: 100%;
   height: 100%;
   z-index: 999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .layout-modal-window {
-  padding: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 72px 24px 24px 24px;
   max-width: 408px;
-  max-height: 80%;
+  min-height: 584px;
   height: 100%;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
 }
 
 .layout-form {
@@ -422,12 +420,74 @@ a {
 }
 
 .layout-button-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
   display: flex;
-  justify-self: end;
   justify-content: center;
   align-items: center;
 }
 
+.layout-button-close .layout-icon {
+  width: 8px;
+  height: 8px;
+}
+
+.layout-modal-heading {
+  margin-bottom: 16px;
+}
+
+.layout-input-section {
+  margin-bottom: 8px;
+}
+
+.layout-form .layout-label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.layout-input-container {
+  position: relative;
+}
+
+.layout-input-field {
+  width: 100%;
+  height: 40px;
+  padding-left: 38px;
+}
+
+.layout-input-container .layout-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 24px;
+}
+
+.layout-textarea-section {
+  margin-bottom: 16px;
+  resize: none;
+}
+
+.layout-textarea {
+  width: 100%;
+  height: 120px;
+  padding: 8px 16px;
+}
+
+.layout-checkbox-section {
+  margin-bottom: 24px;
+}
+
+.layout-label .layout-checkbox-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 /* #endregion LAYOUT */
 
 /* #region THEME*/
@@ -466,7 +526,7 @@ a {
 .theme-icon {
   stroke-width: 0;
   stroke: currentColor;
-  fill: var(--color-light);
+  fill: currentColor;
 }
 
 .theme-small-heading {
@@ -540,9 +600,11 @@ a {
   font-weight: var(--font-weight-subheading);
   color: var(--color-white-background);
   background-color: var(--color-primary-brand);
+  font-size: 16px;
   letter-spacing: 0.04em;
   line-height: 1.5;
   cursor: pointer;
+  border: none;
   border-radius: 4px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 }
@@ -602,7 +664,7 @@ a {
   background-color: transparent;
   border: 1px solid var(--color-white-background);
   border-radius: 4px;
-  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .theme-footer .theme-input::placeholder {
@@ -636,9 +698,59 @@ a {
   box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.12),
     0 1px 1px rgba(0, 0, 0, 0.14);
 }
+
 .theme-button-close {
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  border: solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
+.theme-modal-heading {
+  font-weight: var(--font-weight-subheading);
+  font-family: var(--font-heading);
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--color-dark);
+}
+
+.theme-form .theme-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--color-subtle-text);
+}
+
+.theme-input-field {
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  background-color: transparent;
+  outline: transparent;
+}
+
+.theme-textarea {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  background-color: transparent;
+  outline: transparent;
+}
+
+.theme-label .theme-checkbox-container {
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  fill: transparent;
+}
+
+.theme-label .theme-link {
+  color: var(--color-primary-brand);
+}
 /* #endregion THEME*/
 
 /* #region EFFECTS */
@@ -703,8 +815,72 @@ a {
   transform: translateY(0%);
 }
 
-/* .effects-modal-overlay {
-  pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-} */
+.effects-modal-overlay {
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.effects-modal-window {
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.effects-button-close {
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.effects-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-button-close .effects-icon:hover,
+.theme-button-close .effects-icon:focus {
+  fill: var(--color-white-background);
+}
+
+.effects-button-close:hover,
+.effects-button-close:focus {
+  background-color: var(--color-pressed-state);
+  border: none;
+}
+
+.effects-input-field {
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.effects-input-field:hover,
+.effects-input-field:focus {
+  border-color: var(--color-primary-brand);
+}
+
+.theme-input-container .effects-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-input-container:focus-within .effects-icon,
+.theme-input-container .effects-icon:hover {
+  fill: var(--color-primary-brand);
+}
+
+.effects-textarea {
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.effects-textarea:focus {
+  border-color: var(--color-primary-brand);
+}
+
+theme-label. .effects-checkbox-container {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input[type="checkbox"]:checked + .effects-checkbox-container {
+  background-color: var(--color-pressed-state);
+  border: none;
+  fill: var(--color-light);
+}
+
 /* #endregion EFFECTS*/
